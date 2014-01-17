@@ -1,6 +1,11 @@
 <?php
 
 require 'exec.inc.php';
+require 'ip-check.inc.php';
+
+// ip check
+clientMatchesGitHubIp() or die ('You aren\'t GitHub, you filthy liar.');
+
 // require '../passwd/gh-key.inc.php';
 
 // $_GET['ghk'] == $GH_KEY or die('You shall not pass');
