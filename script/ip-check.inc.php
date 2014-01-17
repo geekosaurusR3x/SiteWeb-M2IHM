@@ -21,8 +21,8 @@ function matchesGitHubIps($ip) {
         if (ipCIDRCheck($ip, $gh_ip_range)) {
             return true;
         }
-     return false;
     }
+    return false;
 }
 
 // Does our client match GitHub's IPs?
