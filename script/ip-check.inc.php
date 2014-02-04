@@ -17,6 +17,7 @@ function ipCIDRCheck ($IP, $CIDR) {
 
 // Does a given IP match GitHub's IPs?
 function matchesGitHubIps($ip) {
+    global $GITHUB_IPS;
     foreach ($GITHUB_IPS as &$gh_ip_range) {
         if (ipCIDRCheck($ip, $gh_ip_range)) {
             return true;
