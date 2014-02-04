@@ -1,5 +1,6 @@
 /*
 Title: Sub Page
+Tags: welcome
 */
 
 ## This is a Sub Page

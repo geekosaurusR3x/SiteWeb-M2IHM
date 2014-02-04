@@ -1,7 +1,7 @@
 <?php
 
 // Constants
-$GITHUB_IPS = array('204.232.175.64/27', '192.30.252.0/22');
+$GITHUB_IPS = array('192.30.252.0/22');
 
 // Source: http://php.net/manual/fr/ref.network.php
 function ipCIDRCheck ($IP, $CIDR) {
@@ -17,6 +17,7 @@ function ipCIDRCheck ($IP, $CIDR) {
 
 // Does a given IP match GitHub's IPs?
 function matchesGitHubIps($ip) {
+    global $GITHUB_IPS;
     foreach ($GITHUB_IPS as &$gh_ip_range) {
         if (ipCIDRCheck($ip, $gh_ip_range)) {
             return true;
