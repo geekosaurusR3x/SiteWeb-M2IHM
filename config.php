@@ -21,3 +21,9 @@ $config['excerpt_length'] = 50;			// The pages excerpt length (in words)
 $config['custom_setting'] = 'Hello'; 	// Can be accessed by {{ config.custom_setting }} in a theme
 
 */
+
+//At Navigation
+$config['at_navigation']['id'] = 'at-navigation';
+$config['at_navigation']['class'] = 'at-navigation';
+$config['at_navigation']['class_li'] = 'list-item';
+$config['at_navigation']['class_a'] = 'link-item';
