@@ -1,3 +1,6 @@
 [submodule "Pico"]
 	path = Pico
 	url = https://github.com/gilbitron/Pico/
+[submodule "plugins/Pico-Pagination"]
+	path = plugins/Pico-Pagination
+	url = https://github.com/rewdy/Pico-Pagination
