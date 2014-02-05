@@ -1,7 +1,9 @@
 /*
 Title: Article sur Owncloud
 Description: This description will go in the meta description tag
-Tags: welcome
+Tags: article,owncloud
+Author: Skad
+Date: 2013/01/01
 */
 
 ##Owncould : un exemple d'utilisation

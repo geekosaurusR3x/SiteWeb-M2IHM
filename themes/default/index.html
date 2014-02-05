@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8" />
+
+	<title>{% if meta.title %}{{ meta.title }} | {% endif %}{{ site_title }}</title>
+{% if meta.description %}
+	<meta name="description" content="{{ meta.description }}">
+{% endif %}{% if meta.robots %}
+	<meta name="robots" content="{{ meta.robots }}">
+{% endif %}
+
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" type="text/css" />
+	<link rel="stylesheet" href="{{ theme_url }}/style.css" type="text/css" />
+
+	<script src="{{ theme_url }}/scripts/modernizr-2.6.1.min.js"></script>
+    {{googletrackingcode}}
+</head>
+<body>
+
 {% include "head.twig" %}
 
     <section id="content">
