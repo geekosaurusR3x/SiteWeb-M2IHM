@@ -1,6 +1,7 @@
 /*
-Title:
-Tags: Owncloud Article
+Title: Article sur Owncloud
+Description: This description will go in the meta description tag
+Tags: welcome
 */
 
 ##Owncould : un exemple d'utilisation

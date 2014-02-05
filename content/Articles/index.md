@@ -1,6 +1,6 @@
 /*
 Title: Articles
-Tags: Article
+Tags: article
 */
 
 ## This is a Articles Page Index
