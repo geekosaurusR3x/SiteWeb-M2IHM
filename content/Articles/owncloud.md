@@ -82,7 +82,7 @@ et de coller dedans :
 
 Bon jusque la c'était la config de l'environement. Maintenant passont à la config d'**Owncloud** en lui même  
 On commence par éditer le virtual host pour pointer au bon endroit :  
-```
+
     <VirtualHost *:80>
         ServerAdmin yourmail@host.com
         DocumentRoot /usr/share/webapps/owncloud
@@ -97,5 +97,4 @@ On commence par éditer le virtual host pour pointer au bon endroit :
             php_admin_value open_basedir /tmp/:/usr/share/pear/:/usr/share/webapps/:/etc/webapps/owncloud/
         </Directory>
     </VirtualHost>
-```
     
