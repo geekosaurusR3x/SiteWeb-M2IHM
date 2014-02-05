@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
@@ -18,17 +19,7 @@
 </head>
 <body>
 
-	<header id="header">
-		<div class="inner clearfix">
-			<h1><a href="{{ base_url }}">{{ site_title }}</a></h1>
-			<ul class="nav">
-				<!--{% for page in pages %}
-				<li><a href="{{ page.url }}">{{ page.title }}</a></li>
-				{% endfor %}-->
-                {{ at_navigation.navigation }}
-			</ul>
-		</div>
-	</header>
+{% include "head.twig" %}
 
     <section id="content">
         <div class="inner">
@@ -97,12 +88,4 @@
 		</div>
 	</section>
 
-	<footer id="footer">
-		<div class="inner">
-			<a href="http://pico.dev7studios.com">Pico</a> was made by <a href="http://gilbert.pellegrom.me">Gilbert Pellegrom</a>
-			from <a href="http://dev7studios.com">Dev7studios</a>.
-		</div>
-	</footer>
-
-</body>
-</html>
+{% include "foot.twig" %}
