@@ -1,0 +1,27 @@
+{% include "head.twig" %}
+
+    <section id="content">
+        <div class="inner">
+            <div id="all-tags">
+                All tags:
+                {% set uniqTags = [] %}
+                {% for page in pages %}
+                    <!-- display single page tags with proper urls -->
+                    {% for tag in page.tags %}
+                        {% if tag | e and tag not in uniqTags %}
+                            {% set uniqTags = uniqTags | merge([tag]) %}
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+                {% if uniqTags %}
+                    <ol>
+                    {% for tag in uniqTags | sort %}
+                        <li><a href="{{ base_url }}/tag/{{ tag }}">#{{ tag }}</a></li>
+                    {% endfor %}
+                    </ol>
+                {% endif %}
+            </div>
+        </div>
+	</section>
+
+{% include "foot.twig" %}
