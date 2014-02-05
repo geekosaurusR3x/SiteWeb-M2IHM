@@ -4,3 +4,6 @@
 [submodule "plugins/Pico-Pagination"]
 	path = plugins/Pico-Pagination
 	url = https://github.com/rewdy/Pico-Pagination
+[submodule "themes/pico-flatui-blog"]
+	path = themes/pico-flatui-blog
+	url = https://github.com/pschmitt/pico-flatui-blog.git
