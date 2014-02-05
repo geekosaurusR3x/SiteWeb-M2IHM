@@ -12,7 +12,7 @@ Date: 05/02/2013
 Alors voila la problématique était relativement simple et commue.
 
 Je lis pas mal de comics en numérique et ma vielle tablette Transformer premiere du nom (tf101) est assez pratique pour cela.  
-Neamoins je suis assez fainéant pour ne pas apprécier devoir copier/coller les archives sur la SDcard (surtout qu'ils sont stoqués sur un serveur dans mon réseau pour centraliser tout ca.
+Neamoins je suis assez fainéant pour ne pas apprécier devoir copier/coller les archives sur la SDcard (surtout qu'ils sont stoqués sur un serveur dans mon réseau pour centraliser tout ça).
 
 Donc j'avais pas vraiment d'options :  
 
