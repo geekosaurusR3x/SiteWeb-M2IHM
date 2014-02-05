@@ -55,7 +55,7 @@ class Picotags {
             // Loop through the pages
             foreach ($pages as $page) {
                 // If the page has tags
-                if ($page['tags']) {
+                if (array_key_exists('tags',$page)) {
                     if (!is_array($page['tags'])) {
                         $page['tags'] = explode(',', $page['tags']);
                     }
@@ -78,8 +78,10 @@ class Picotags {
         } else { // Workaround
             $new_pages = array();
             foreach ($pages as $page) {
-                if (!is_array($page['tags'])) {
-                    $page['tags'] = explode(',', $page['tags']);
+                if (array_key_exists('tags',$page)) {
+                    if (!is_array($page['tags'])) {
+                        $page['tags'] = explode(',', $page['tags']);
+                    }
                 }
                 $new_pages[] = $page;
             }
