@@ -27,3 +27,6 @@ $config['at_navigation']['id'] = 'at-navigation';
 $config['at_navigation']['class'] = 'at-navigation';
 $config['at_navigation']['class_li'] = 'list-item';
 $config['at_navigation']['class_a'] = 'link-item';
+
+//google Analytic
+$config['google_tracking_id'] = 'UA-47794679-1';
