@@ -64,8 +64,9 @@ class mcb_TableOfContent {
       // document doesn't already contain one:
       //
       // http://stackoverflow.com/questions/8218230/php-domdocument-loadhtml-not-encoding-utf-8-correctly
-      $html = DOMDocument::loadHTML('<?xml encoding="utf-8" ?>' . $content);
-      $xp = new DOMXPath($html);
+      $domdoc = new DOMDocument();
+      $domdoc->loadHTML('<?xml encoding="utf-8" ?>' . $content);
+      $xp = new DOMXPath($domdoc);
 
       $nodes =$xp->query($this->xpQuery);
 
@@ -83,7 +84,7 @@ class mcb_TableOfContent {
                 ++$id;
                 $sort->setAttribute('id', "mcb_toc_head$id");
              }
-             $a = $html->createElement('a', $this->top_txt);
+             $a = $domdoc->createElement('a', $this->top_txt);
              $a->setAttribute('href', '#top');
              $a->setAttribute('id', 'toc-nav');
              $sort->appendChild($a);
@@ -93,7 +94,7 @@ class mcb_TableOfContent {
       if($this->anchor)
       {
          $body = $xp->query("//body/node()")->item(0);
-         $a = $html->createElement('a');
+         $a = $domdoc->createElement('a');
          $a->setAttribute('name', 'top');
          $body->parentNode->insertBefore($a, $body);
       }
@@ -101,7 +102,7 @@ class mcb_TableOfContent {
       $content = preg_replace(
                      array("/<(!DOCTYPE|\?xml).+?>/", "/<\/?(html|body)>/"),
                      array(                         "",                   ""),
-                     $html->saveHTML()
+                     $domdoc->saveHTML()
                               );
 
       $this->toc = $this->makeToc($content);
