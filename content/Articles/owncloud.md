@@ -98,4 +98,10 @@ On commence par editer le virtual host pour pointer au bon endroit :
         </Directory>
     </VirtualHost>
 ```
-    
+La balise `ServerName` designe l'url qui va etre demander par le client  
+Le `<Directory "/usr/share/webapps/owncloud">` designe les regles pour le dossier d'**Owncloud**
+(!!! Ne pas oublier de surcharger la valeur php `php_admin_value open_basedir` avec ceci : `/tmp/:/usr/share/pear/:/usr/share/webapps/:/etc/webapps/owncloud/` sinon php ne voudra rien savoir sortira une erreure : `open_basedir restriction in effect. File(/usr/share/webapps/*.php) is not within the allowed path(s):`)
+
+Bon je crois qu'apres tous ca la configration est finit et on peut deja acceder a notre **Owncloud**
+[http://owncloud.localhost](http://owncloud.localhost "Owncloud")  
+Pour le reste il suffit de se laisser porter par
