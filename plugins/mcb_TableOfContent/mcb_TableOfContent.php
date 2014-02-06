@@ -52,7 +52,7 @@ class mcb_TableOfContent {
       }
       $this->xpQuery = join("|", $this->xpQuery);
 
-      $this->top_link = '<a href="#top" id="toc-nav">'.$this->top_txt.'</a>';
+      $this->top_link = '<a href="#top" class="toc-nav">'.$this->top_txt.'</a>';
    }
 
    public function after_parse_content(&$content)
@@ -86,7 +86,7 @@ class mcb_TableOfContent {
              }
              $a = $domdoc->createElement('a', $this->top_txt);
              $a->setAttribute('href', '#top');
-             $a->setAttribute('id', 'toc-nav');
+             $a->setAttribute('class', 'toc-nav');
              $sort->appendChild($a);
           }
       }
