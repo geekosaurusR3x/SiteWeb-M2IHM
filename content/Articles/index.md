@@ -8,5 +8,3 @@ Tags: article
     <?php
         echo "toto"
     ?>
-
-</span>

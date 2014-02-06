@@ -25,10 +25,10 @@ $config['custom_setting'] = 'Hello'; 	// Can be accessed by {{ config.custom_set
 */
 
 //At Navigation
-$config['at_navigation']['id'] = 'at-navigation';
-$config['at_navigation']['class'] = 'at-navigation';
-$config['at_navigation']['class_li'] = 'list-item';
-$config['at_navigation']['class_a'] = 'link-item';
+$config['at_navigation']['id'] = '';
+$config['at_navigation']['class'] = 'bmenu';
+$config['at_navigation']['class_li'] = '';
+$config['at_navigation']['class_a'] = '';
 
 //google Analytic
 $config['google_tracking_id'] = 'UA-47794679-1';
