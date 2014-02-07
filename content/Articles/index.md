@@ -1,10 +1,5 @@
 /*
 Title: Articles
-Tags: article
+Description: The place where i write something
+Author: Skad
 */
-
-## This is a Articles Page Index
- 
-    <?php
-        echo "toto"
-    ?>

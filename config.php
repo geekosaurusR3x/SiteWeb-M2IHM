@@ -6,6 +6,7 @@
 $config['site_title'] = 'Pico';			// Site title
 $config['base_url'] = ''; 				// Override base URL (e.g. http://example.com)
 */
+$config['site_title'] = 'Skad.co';	
 $config['theme'] = 'pico-flatui-blog'; 			// Set the theme (defaults to "default")
 /*
 $config['date_format'] = 'jS M Y';		// Set the PHP date format
@@ -14,8 +15,10 @@ $config['twig_config'] = array(			// Twig settings
 	'autoescape' => false,				// Autoescape Twig vars
 	'debug' => false					// Enable Twig debug
 );
+*/
 $config['pages_order_by'] = 'alpha';	// Order pages by "alpha" or "date"
 $config['pages_order'] = 'asc';			// Order pages "asc" or "desc"
+/*
 $config['excerpt_length'] = 50;			// The pages excerpt length (in words)
 
 // To add a custom config setting:
@@ -30,5 +33,12 @@ $config['at_navigation']['class'] = 'bmenu';
 $config['at_navigation']['class_li'] = '';
 $config['at_navigation']['class_a'] = '';
 
+//social button
+$config['social']['class_prefix'] = 'btn btn-';
+
 //google Analytic
 $config['google_tracking_id'] = 'UA-47794679-1';
+
+//pico_slider
+$config['pico_slider']['image_path'] = 'content/images';
+$config['pico_slider']['image_ext'] = '.jpeg';

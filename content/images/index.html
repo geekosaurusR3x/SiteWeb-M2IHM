@@ -1,0 +1,15 @@
+<div id="slider" class='swipe'>
+  <div class="swipe-wrap">
+    {% for image in images %}
+      <div class="swipe-slide">
+        <img src="{{ image.url }}" alt="{{ image.name }}" width="{{ image.width }}" height="{{ image.height }}">
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<div style='text-align:center;padding-top:20px;'>
+  
+  <button onclick='mySwipe.prev()'>prev</button> 
+  <button onclick='mySwipe.next()'>next</button>
+
+</div>
