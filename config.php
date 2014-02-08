@@ -28,10 +28,10 @@ $config['custom_setting'] = 'Hello'; 	// Can be accessed by {{ config.custom_set
 */
 
 //At Navigation
-$config['at_navigation']['id'] = '';
+$config['at_navigation']['id'] = 'bmenu';
 $config['at_navigation']['class'] = 'bmenu';
-$config['at_navigation']['class_li'] = '';
-$config['at_navigation']['class_a'] = '';
+$config['at_navigation']['class_li'] = 'bemnu_li';
+$config['at_navigation']['class_a'] = 'bmenu_a';
 
 //social button
 $config['social']['class_prefix'] = 'btn btn-';
