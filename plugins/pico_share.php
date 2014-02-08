@@ -12,10 +12,10 @@
 class Pico_Share {
 
 	public $templates = array(
-			'twitter' => 'https://twitter.com/intent/tweet?text=__TITLE__&url=__URL__',
+			'twitter' => 'https://twitter.com/intent/tweet?text=__TITLE__&amp;url=__URL__',
 			'facebook' => 'https://www.facebook.com/sharer/sharer.php?u=__URL__',
 			'google' => 'https://plus.google.com/share?url=__URL__',
-			'linkedin' => 'http://www.linkedin.com/shareArticle?mini=true&url=__URL__&title=__TITLE__&summary=__EXCERPT__&source=__URL__' 
+			'linkedin' => 'http://www.linkedin.com/shareArticle?mini=true&amp;url=__URL__&amp;title=__TITLE__&amp;summary=__EXCERPT__&amp;source=__URL__'
 		);
 
 	public function __construct() {
@@ -37,16 +37,16 @@ class Pico_Share {
 		};
 		if(isset($settings['social']['output'])) {
 			$this->config['output'] = $settings['social']['output'];
-		};	
+		};
 		if(isset($settings['social']['class_prefix'])) {
 			$this->config['class_prefix'] = $settings['social']['class_prefix'];
-		};						
+		};
 	}
-	
+
 	public function before_render(&$twig_vars, &$twig, &$template) {
-		$pageTitle = $twig_vars['current_page']['title'];
+		$pageTitle = rawurlencode($twig_vars['current_page']['title']);
 		$pageURL = $twig_vars['current_page']['url'];
-		$pageExcerpt = $twig_vars['current_page']['excerpt'];
+		$pageExcerpt = rawurlencode($twig_vars['current_page']['excerpt']);
 		$activeServices = array();
 
 		foreach($this->config['services'] as $key => $value) {
