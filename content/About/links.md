@@ -7,6 +7,7 @@ Tags: me,contact,social
 */
 
 ##Social Media
+Attention ces liens ouvrent de nouvelles pages
 
 <a class="btn btn-linkedin" target="_blank" href="http://fr.linkedin.com/pub/vincent-lamouroux/54/6b3/778/" title="Vincent Lamouroux Linkedin">Linkedin</a>
 <a class="btn btn-google" target="_blank" href="https://plus.google.com/u/0/104385226371617353628/" title="Vincent Lamouroux Google+">Google +</a>
