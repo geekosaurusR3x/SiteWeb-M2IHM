@@ -1,6 +1,6 @@
 [submodule "Pico"]
 	path = Pico
-	url = https://github.com/gilbitron/Pico/
+	url = https://github.com/pschmitt/Pico/
 [submodule "themes/pico-flatui-blog"]
 	path = themes/pico-flatui-blog
 	url = https://github.com/pschmitt/pico-flatui-blog.git
