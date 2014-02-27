@@ -3,7 +3,7 @@ Title: OpenGL M2ihm
 Description: Une petite simulation d'éolienne
 Tags: projet,C++,OpenGl,jeux
 Author: Skad
-Date: 02/10/2013
+Date: 02/10/2014
 */
 
 http://daniel-sanou.olympe.in/

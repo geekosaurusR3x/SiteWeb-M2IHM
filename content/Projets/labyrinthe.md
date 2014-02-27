@@ -3,7 +3,7 @@ Title: Android M2ihm
 Description: Une declinaison du labyrinthe sur le theme spacial 8bits
 Tags: projet,android,jeux,8bits
 Author: Skad
-Date: 02/10/2013
+Date: 02/10/2014
 */
 
 ##Presentation

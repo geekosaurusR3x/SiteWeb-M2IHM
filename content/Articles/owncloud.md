@@ -3,7 +3,7 @@ Title: Article sur Owncloud
 Description: Un article décrivant l'utilisation d'Owncloud
 Tags: article,owncloud,archlinux
 Author: Skad
-Date: 05/02/2013
+Date: 02/05/2014
 */
 
 ![Owncloud logo](http://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/OwnCloud2-Logo.svg/96px-OwnCloud2-Logo.svg.png "Owncloud logo")
