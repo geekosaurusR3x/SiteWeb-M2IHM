@@ -47,3 +47,5 @@ $config['pico_slider']['image_ext'] = '.jpeg';
 
 //mcb_table_of_content
 $config['mcb_toc_top_txt'] = 'Vers le haut';
+$config['mcb_toc_caption'] = 'Sommaire';
+
