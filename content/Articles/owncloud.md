@@ -107,7 +107,7 @@ Pour le reste, il suffit de se laisser porter par la page de config qui est asse
 Après, pour connecter les clients, il suffira d'utiliser notre entrée dns comme url de serveur `owncloud.host.com`.
 
 ###Client Pc
-Sous ArcheLinux, il a un client officiel présent dans les dépôts aur `sudo yaourt owncloud-client`.  
+Sous ArchLinux, il a un client officiel présent dans les dépôts AUR `yaourt owncloud-client`.  
 Après l'installation, il suffit de rentrer le login et le mot de passe définis sur le serveur et ça va se mettre à synchroniser tout seul.
 ![Owncloud CLient Linux](http://owncloud.org/wp-content/uploads/2012/03/linux3.png "Owncloud CLient Linux")
 
