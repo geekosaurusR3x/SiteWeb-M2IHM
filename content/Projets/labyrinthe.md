@@ -6,7 +6,7 @@ Author: Skad
 Date: 02/10/2014
 */
 
-##Presentation
+##Présentation
 
 Ce projet est un projet de fac en colaboration avec [Philipp Schmitt](http://lxl.io/about "Philipp Schmitt resume").  
 La thematique etait de faire une declinaison du jeux classique de labyrinthe ([Wikipédia](http://fr.wikipedia.org/wiki/Jeu_de_labyrinthe "Wikipédia labyrinthe")) en quelques semaines
