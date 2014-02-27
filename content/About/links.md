@@ -1,5 +1,5 @@
 /*
-Title: Links
+Title: Liens
 Description: How to contact me
 Author: Skad
 Date : 02/05/2014

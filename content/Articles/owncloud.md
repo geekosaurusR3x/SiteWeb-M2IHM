@@ -1,5 +1,5 @@
 /*
-Title: Article sur Owncloud
+Title: Owncloud
 Description: Un article décrivant l'utilisation d'Owncloud
 Tags: article,owncloud,archlinux
 Author: Skad

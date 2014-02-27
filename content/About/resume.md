@@ -1,5 +1,5 @@
 /*
-Title: Resume
+Title: Curriculum
 Description: My resume
 Author: Skad
 Date : 02/05/2014
