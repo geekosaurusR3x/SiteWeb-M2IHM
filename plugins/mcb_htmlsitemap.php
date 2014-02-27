@@ -42,7 +42,7 @@ class mcb_HtmlSitemap {
 		
       $sitemap = '<ul class="sitemap">';
 		foreach($p as $url => $title)
-			$sitemap .= "<li class=\"level".count(explode( "/", $url))."\"> <a href=\"$url\">$title</a></li>\n";
+			$sitemap .= "<li class=\"level".count(explode( "/", $url))."\"> <a title=\"Se rendre sur la page intitul&eacute;e $title\" href=\"$url\">$title</a></li>\n";
 		
 		$this->content .= $sitemap . "</ul>";
 	}
