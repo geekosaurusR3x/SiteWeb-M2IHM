@@ -40,7 +40,7 @@ class mcb_HtmlSitemap {
       
 		ksort ( $p , SORT_STRING);
 		
-      $sitemap = "<ul>";
+      $sitemap = '<ul class="sitemap">';
 		foreach($p as $url => $title)
 			$sitemap .= "<li class=\"level".count(explode( "/", $url))."\"> <a href=\"$url\">$title</a></li>\n";
 		
