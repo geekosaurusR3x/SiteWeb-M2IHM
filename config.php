@@ -44,3 +44,6 @@ $config['google_tracking_id'] = 'UA-47794679-1';
 //pico_slider
 $config['pico_slider']['image_path'] = 'content/images';
 $config['pico_slider']['image_ext'] = '.jpeg';
+
+//mcb_table_of_content
+$config['mcb_toc_top_txt'] = 'Vers le haut';
