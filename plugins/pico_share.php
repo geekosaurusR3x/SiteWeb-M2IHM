@@ -51,7 +51,7 @@ class Pico_Share {
 
 		foreach($this->config['services'] as $key => $value) {
 			if(is_bool($value) && $value) {
-				$activeServices[$key] = '<a class="'.$this->config['class_prefix'].$key.'" target="_blank" href="'.
+				$activeServices[$key] = '<a class="'.$this->config['class_prefix'].$key.'" title="'.$key.' sharing" target="_blank" href="'.
 				preg_replace(array('/__TITLE__/', '/__URL__/', '/__EXCERPT__/'), array($pageTitle, $pageURL, $pageExcerpt), $this->templates[$key]).
 				'">'.$key.'</a>';
 			};
