@@ -8,8 +8,9 @@ $config['base_url'] = ''; 				// Override base URL (e.g. http://example.com)
 */
 $config['site_title'] = 'Skad.co';	
 $config['theme'] = 'pico-flatui-blog'; 			// Set the theme (defaults to "default")
+
+$config['date_format'] = 'j M Y';		// Set the PHP date format
 /*
-$config['date_format'] = 'jS M Y';		// Set the PHP date format
 $config['twig_config'] = array(			// Twig settings
 	'cache' => false,					// To enable Twig caching change this to CACHE_DIR
 	'autoescape' => false,				// Autoescape Twig vars
