@@ -8,10 +8,10 @@ Date: 02/10/2014
 
 ##Présentation
 
-Ce projet est un projet de fac en collaboration avec [Daniel Sanou](http://daniel-sanou.olympe.in/ "Daniel Sanou resume").  
-La thématique était de modéliser en OpenGl un champ d'Éoliennes avec un déplacement de camera et quelques changement de lumieres
+Ce projet est un projet de fac en collaboration avec [Daniel Sanou](http://daniel-sanou.olympe.in/ "Daniel Sanou resume").
+La thématique était de modéliser en OpenGl un champ d'éoliennes avec un déplacement de camera et quelques changement de lumieres
 
-En extra, un Benchmark simple est present. Il ajoute une éolienne à chaque frame et s'arrete lorsque les fps tombent en dessous de 5 pendent 30 secondes. Il affiche le résultat est affiché dans la console  
+En extra, un benchmark simple est present. Il ajoute une éolienne à chaque frame et s'arrête lorsque les FPS tombent en dessous de 5 pendent 30 secondes. Il affiche le résultat dans la console
 
 Un menu contextuel est présent, permettant de :
 
@@ -23,9 +23,9 @@ Un menu contextuel est présent, permettant de :
 - Afficher l'aide
 - Quitter l'application
 
-Un console est aussi présente pour interagir avec le mode virtuel.
+Une console est aussi présente pour interagir avec le mode virtuel.
 
-Toute les sources sont disponibles sur [Github](https://github.com/skad/OpenGL-M2IHM "github OpenGL")
+Toutes les sources sont disponibles sur [Github](https://github.com/skad/OpenGL-M2IHM "github OpenGL")
 
 ##Images
 
