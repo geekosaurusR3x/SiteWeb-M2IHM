@@ -6,8 +6,6 @@ Author: Skad
 Date: 02/10/2014
 */
 
-http://daniel-sanou.olympe.in/
-
 ##Présentation
 
 Ce projet est un projet de fac en collaboration avec [Daniel Sanou](http://daniel-sanou.olympe.in/ "Daniel Sanou resume").  
