@@ -4,3 +4,6 @@
 [submodule "themes/pico-flatui-blog"]
 	path = themes/pico-flatui-blog
 	url = https://github.com/pschmitt/pico-flatui-blog.git
+[submodule "themes/skad.co_material"]
+	path = themes/skad.co_material
+	url = gitlab@git.skad.co:skad/skad.co_material.git
