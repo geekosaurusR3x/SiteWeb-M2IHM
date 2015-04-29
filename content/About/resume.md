@@ -16,6 +16,7 @@ Vincent Lamouroux
 - Juin 2008 : Diplôme d'Entrée à l' Université B mention Bien (DEAU B) UFR MIM (Metz)
 
 ##Expérience Professionnelle:
+- Avril à Septembre 2014 : Stage chez POST Technologies (Service ICT)
 
 - Avril à Mai 2011 : Stage chez Conostix (Kayl)  
 Création d'un proxy pop/smtp/imap en python améliorer la sécurité dans leur produit : SecurePME
