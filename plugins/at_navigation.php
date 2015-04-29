@@ -67,10 +67,11 @@ class AT_Navigation {
 	{
 		$id = $start ? $this->settings['at_navigation']['id'] : '';
 		$class = $start ? $this->settings['at_navigation']['class'] : '';
+		$class_under = $start ? $this->settings['at_navigation']['class_under'] : '';
 		$class_li = $this->settings['at_navigation']['class_li'];
 		$class_a = $this->settings['at_navigation']['class_a'];
 		$child = '';
-		$ul = $start ? '<ul id="%s" class="%s">%s</ul>' : '<ul>%s</ul>';
+		$ul = $start ? '<ul id="%s" class="%s">%s</ul>' : '<ul class="%s">%s</ul>';
 		
 		if (isset($navigation['_child']))
 		{
@@ -82,7 +83,7 @@ class AT_Navigation {
 				$child .= $this->at_build_navigation($c);
 			}
 			
-			$child = $start ? sprintf($ul, $id, $class, $child) : sprintf($ul, $child);
+			$child = $start ? sprintf($ul, $id, $class, $child) : sprintf($ul, $class_under ,$child);
 		}
 		
 		$li = isset($navigation['title'])

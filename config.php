@@ -9,7 +9,7 @@ $config['base_url'] = ''; 				// Override base URL (e.g. http://example.com)
 // Force locale
 setLocale(LC_ALL, 'fr_FR');
 $config['site_title'] = 'Skad.co';
-$config['theme'] = 'pico-flatui-blog'; 			// Set the theme (defaults to "default")
+$config['theme'] = 'skad.co_material'; 			// Set the theme (defaults to "default")
 $config['date_format'] = '%A %e %b %G';		// Set the PHP date format
 /*
 $config['twig_config'] = array(			// Twig settings
@@ -30,10 +30,11 @@ $config['custom_setting'] = 'Hello'; 	// Can be accessed by {{ config.custom_set
 */
 
 //At Navigation
-$config['at_navigation']['id'] = 'bmenu';
-$config['at_navigation']['class'] = 'bmenu';
-$config['at_navigation']['class_li'] = 'bemnu_li';
-$config['at_navigation']['class_a'] = 'bmenu_a';
+$config['at_navigation']['id'] = 'slide-out';
+$config['at_navigation']['class'] = 'side-nav fixed';
+$config['at_navigation']['class_li'] = '';
+$config['at_navigation']['class_a'] = '';
+$config['at_navigation']['class_under'] = 'collapsible';
 
 //social button
 $config['social']['class_prefix'] = 'btn btn-';
