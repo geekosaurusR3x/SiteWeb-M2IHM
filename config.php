@@ -35,7 +35,7 @@ $config['at_navigation']['class'] = 'side-nav fixed collapsible';
 $config['at_navigation']['class_li'] = 'bold';
 $config['at_navigation']['class_a'] = 'collapsible-header waves-effect waves-teal';
 $config['at_navigation']['class_under'] = '';
-$config['at_navigation']['activeClass'] = 'active teal';
+$config['at_navigation']['activeClass'] = 'active';
 
 
 //social button

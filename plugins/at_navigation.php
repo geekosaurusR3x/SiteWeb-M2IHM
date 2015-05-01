@@ -74,6 +74,7 @@ class AT_Navigation {
 		$child = '';
 		$ul = $start ? '<ul id="%s" class="%s">%s</ul>' : '<div class="collapsible-body"><ul class="%s">%s</ul></div>';
 		
+		$active = false;
 		if (isset($navigation['_child']))
 		{
 			$_child = $navigation['_child'];
@@ -82,12 +83,17 @@ class AT_Navigation {
 			foreach ($_child as $c)
 			{
 				$child .= $this->at_build_navigation($c);
+			    if(strpos($c['class'],$this->settings['at_navigation']['activeClass']) !== false){
+					$active = true;
+				}
 			}
 			
 			$navigation['url']="#";
 			$child = $start ? sprintf($ul, $id, $class, $child) : sprintf($ul, $class_under ,$child);
 		}
 		
+		if($active){$class_a .= " ".$this->settings['at_navigation']['activeClass'];}
+
 		$li = isset($navigation['title'])
 			? sprintf(
 				'<li class="%1$s %5$s"><a href="%2$s" class="%1$s %6$s" title="%3$s">%3$s</a>%4$s</li>',
