@@ -46,6 +46,7 @@ class AT_Navigation {
 		if (!isset($this->settings['at_navigation']['class'])) { $this->settings['at_navigation']['class'] = 'at-navigation'; }
 		if (!isset($this->settings['at_navigation']['class_li'])) { $this->settings['at_navigation']['class_li'] = 'li-item'; }
 		if (!isset($this->settings['at_navigation']['class_a'])) { $this->settings['at_navigation']['class_a'] = 'a-item'; }
+		if (!isset($this->settings['at_navigation']['activeClass'])) { $this->settings['at_navigation']['activeClass'] = 'is-active'; }
 		
 		// default excludes
 		$this->settings['at_navigation']['exclude'] = array_merge_recursive(
@@ -71,7 +72,7 @@ class AT_Navigation {
 		$class_li = $this->settings['at_navigation']['class_li'];
 		$class_a = $this->settings['at_navigation']['class_a'];
 		$child = '';
-		$ul = $start ? '<ul id="%s" class="%s">%s</ul>' : '<ul class="%s">%s</ul>';
+		$ul = $start ? '<ul id="%s" class="%s">%s</ul>' : '<div class="collapsible-body"><ul class="%s">%s</ul></div>';
 		
 		if (isset($navigation['_child']))
 		{
@@ -83,6 +84,7 @@ class AT_Navigation {
 				$child .= $this->at_build_navigation($c);
 			}
 			
+			$navigation['url']="#";
 			$child = $start ? sprintf($ul, $id, $class, $child) : sprintf($ul, $class_under ,$child);
 		}
 		
@@ -134,7 +136,7 @@ class AT_Navigation {
 	
 	private function at_recursive($split = array(), $page = array(), $current_page = array())
 	{
-		$activeClass = (isset($this->settings['at_navigation']['activeClass'])) ? $this->settings['at_navigation']['activeClass'] : 'is-active';
+		$activeClass = $this->settings['at_navigation']['activeClass'];
 		if (count($split) == 1)
 		{			
 			$is_index = ($split[0] == '') ? true : false;

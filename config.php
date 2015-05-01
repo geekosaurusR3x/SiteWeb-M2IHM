@@ -31,10 +31,12 @@ $config['custom_setting'] = 'Hello'; 	// Can be accessed by {{ config.custom_set
 
 //At Navigation
 $config['at_navigation']['id'] = 'slide-out';
-$config['at_navigation']['class'] = 'side-nav fixed';
-$config['at_navigation']['class_li'] = '';
-$config['at_navigation']['class_a'] = '';
-$config['at_navigation']['class_under'] = 'collapsible';
+$config['at_navigation']['class'] = 'side-nav fixed collapsible';
+$config['at_navigation']['class_li'] = 'bold';
+$config['at_navigation']['class_a'] = 'collapsible-header waves-effect waves-teal';
+$config['at_navigation']['class_under'] = '';
+$config['at_navigation']['activeClass'] = 'active teal';
+
 
 //social button
 $config['social']['class_prefix'] = 'btn btn-';
