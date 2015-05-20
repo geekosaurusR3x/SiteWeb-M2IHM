@@ -41,8 +41,6 @@ $config['at_navigation']['activeClass'] = 'active';
 //social button
 $config['social']['class_prefix'] = 'btn btn-';
 
-//google Analytic
-$config['google_tracking_id'] = 'UA-47794679-1';
 
 //pico_slider
 $config['pico_slider']['image_path'] = 'content/images';
