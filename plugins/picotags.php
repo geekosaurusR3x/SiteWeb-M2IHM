@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Picotags
  *
@@ -9,8 +10,10 @@
  * @license http://danreeves.mit-license.org/
  */
 class Picotags {
+
     public $is_tag;
     public $current_tag;
+
     /*
         Declaring two functions for sorting tags with special chars
         Thanks to Olivier Laviale (https://github.com/olvlvl)
@@ -19,22 +22,27 @@ class Picotags {
     private function wd_remove_accents($str, $charset='utf-8')
     {
         $str = htmlentities($str, ENT_NOQUOTES, $charset);
+
         $str = preg_replace('#&([A-za-z])(?:acute|cedil|caron|circ|grave|orn|ring|slash|th|tilde|uml);#', '\1', $str);
         $str = preg_replace('#&([A-za-z]{2})(?:lig);#', '\1', $str); // pour les ligatures e.g. '&oelig;'
         $str = preg_replace('#&[^;]+;#', '', $str); // supprime les autres caractères
+
         return $str;
     }
     private function wd_unaccent_compare_ci($a, $b)
     {
         return strcmp(strtolower($this->wd_remove_accents($a)), strtolower($this->wd_remove_accents($b)));
     }
+
     public function tags_sorting(&$array)
     {
         $array = array_flip($array);
         uksort($array, 'Picotags::wd_unaccent_compare_ci');
         $array = array_flip($array);
     }
+
     public function config_loaded(&$settings) {
+
         if (isset($settings['ptags_nbcol']))
         {
             $this->ptags_nbcol = $settings['ptags_nbcol'];
@@ -68,6 +76,7 @@ class Picotags {
             }
         }
     }
+
     public function request_url(&$url)
     {
         // Set is_tag to true if the first four characters of the URL are 'tag/'
@@ -75,11 +84,13 @@ class Picotags {
         // If the URL does start with 'tag/', grab the rest of the URL
         if ($this->is_tag) $this->current_tag = urldecode(substr($url, 4));
     }
+
     public function before_read_file_meta(&$headers)
     {
         // Define tags variable
         $headers['tags'] = 'Tags';
     }
+
     public function file_meta(&$meta)
     {
         // Parses meta.tags to ensure it is an array
@@ -92,21 +103,25 @@ class Picotags {
             }
         }
     }
+
     public function get_page_data(&$data, $page_meta)
     {
         // If tags in page_meta isn't empty
         if ($page_meta['tags'] != '') {
             // Add tags to page in pages
             $data['tags'] = explode(',', $page_meta['tags']);
+
             // Sort alphabetically the tags for tag pages
             // (works on my local WampServer2.5 and LAMP)
             // for localhost ?
+
             if (isset($this->ptags_sort) and $this->ptags_sort === true)
             {
                 $this->tags_sorting($data['tags']);
             }
         }
     }
+
     public function exclude_from_tag_list(&$lapage)
     {
         $lapagemeta = array();
@@ -131,6 +146,7 @@ class Picotags {
         else
             return false;
     }
+
     public function get_pages(&$pages, &$current_page, &$prev_page, &$next_page)
     {
         // If the URL starts with 'tag/' do this different logic
@@ -144,8 +160,10 @@ class Picotags {
                 if ($page['tags'] and $this->exclude_from_tag_list($page) == false) {
                     if (!is_array($page['tags'])) {
                         $page['tags'] = explode(',', $page['tags']);
+
                         // Sort alphabetically the tags for tag pages
                         // (works on my OVH server)
+
                         if (isset($this->ptags_sort) and $this->ptags_sort === true)
                         {
                             $this->tags_sorting($page['tags']);
@@ -163,8 +181,10 @@ class Picotags {
                     }
                 }
             }
+
             // Removing from the tags list the tags with only one reference
             // Change the value to $config['ptags_delunique'] = true; in the config.php
+
             if (isset($this->ptags_delunique) and $this->ptags_delunique === true)
             {
                 foreach(array_count_values($tag_list) as $val => $occ)
@@ -176,10 +196,13 @@ class Picotags {
                     }
                 }
             }
+
             // Sort alphabetically, case insensitive
             // Change the value to $config['ptags_sort'] = true; in the config.php
+
             if (isset($this->ptags_sort) and $this->ptags_sort === true)
             {
+
                 $tag_list_sorted = array();
                 $tag_list_sorted = $tag_list;
                 $tag_list = array();
@@ -213,6 +236,7 @@ class Picotags {
             $this->tag_list = array_unique(array_filter($tag_list));
         }
     }
+
     public function before_render(&$twig_vars, &$twig, &$template)
     {
         if ($this->is_tag) {
