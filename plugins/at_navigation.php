@@ -111,9 +111,12 @@ class AT_Navigation
 
             foreach ($_child as $c) {
                 $child .= $this->at_build_navigation($c);
-				 if(strpos($c['class'],$this->settings['at_navigation']['activeClass']) !== false){
+				if(isset($c['class'])){
+					if(strpos($c['class'],$this->settings['at_navigation']['activeClass']) !== false){
 					$active = true;
 				}
+				}
+
             }
 
 			$navigation['url']="#";
