@@ -111,10 +111,8 @@ class AT_Navigation
 
             foreach ($_child as $c) {
                 $child .= $this->at_build_navigation($c);
-				if(isset($c['class'])){
 					if(strpos($c['class'],$this->settings['at_navigation']['activeClass']) !== false){
 					$active = true;
-				}
 				}
 
             }
@@ -123,6 +121,9 @@ class AT_Navigation
             $child = $start ? sprintf($ul, $id, $class, $child) : sprintf($ul, $class_under,$child);
         }
 
+		if($active){
+			$class_a .= " ".$this->settings['at_navigation']['activeClass'];
+		}
         $li = isset($navigation['title'])
             ? sprintf(
                 '<li class="%1$s %5$s"><a href="%2$s" class="%1$s %6$s" title="%3$s">%3$s</a>%4$s</li>',
