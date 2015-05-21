@@ -17,7 +17,9 @@ class mcb_TableOfContent {
    private $caption = '';
    private $anchor = false;
    private $top_link;
-   // internal
+   private $classs = '';
+
+	// internal
    private $toc = '';
    private $xpQuery;
 
@@ -35,7 +37,7 @@ class mcb_TableOfContent {
 
       $cap = $this->caption =='' ? "" :  '<p id="toc-header">'.$this->caption.'</p>';
 
-      return '<div id="toc">'.$cap.'<ul>'.$heads.'</ul></div>';
+      return '<div id="toc" class="'.$this->classs.'">'.$cap.'<ul class="section table-of-contents">'.$heads.'</ul></div>';
    }
 
    public function config_loaded(&$settings)
@@ -46,6 +48,7 @@ class mcb_TableOfContent {
       if(isset($settings['mcb_toc_caption'    ])) $this->caption     = &$settings['mcb_toc_caption'];
       if(isset($settings['mcb_toc_anchor'     ])) $this->anchor      = &$settings['mcb_toc_anchor'];
       if(isset($settings['top_link'           ])) $this->top_link    = &$settings['top_link'];
+      if(isset($settings['mcb_toc_main_class' ])) $this->classs    = &$settings['mcb_toc_main_class'];
 
       for ($i=1; $i <= $this->depth; $i++) {
          $this->xpQuery[] = "//h$i";
