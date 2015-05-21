@@ -81,9 +81,9 @@ class Picotags {
     public function request_url(&$url)
     {
         // Set is_tag to true if the first four characters of the URL are 'tag/'
-        $this->is_tag = (substr($url, 0, 4) === 'tag/');
+        $this->is_tag = (substr($url, 0, 4) === 'tags');
         // If the URL does start with 'tag/', grab the rest of the URL
-        if ($this->is_tag) $this->current_tag = urldecode(substr($url, 4));
+        if ($this->is_tag) $this->current_tag = urldecode(substr($url, 5));
     }
 
     public function before_read_file_meta(&$headers)
@@ -252,6 +252,7 @@ class Picotags {
             $twig_vars['meta']['title'] = "#" . $this->current_tag;
             // Return current tag and list of all tags as Twig vars
         }
+            $twig_vars['is_tag'] = $this->is_tag; /* {{ current_tag }} is a string*/
             $twig_vars['current_tag'] = $this->current_tag; /* {{ current_tag }} is a string*/
             $twig_vars['pagetags'] = $this->pagestags; /* {{ current_tag }} is a string*/
             /*
