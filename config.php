@@ -9,7 +9,7 @@ $config['base_url'] = ''; 				// Override base URL (e.g. http://example.com)
 // Force locale
 setLocale(LC_ALL, 'fr_FR');
 $config['site_title'] = 'Skad.co';
-$config['theme'] = 'skad.co_material'; 			// Set the theme (defaults to "default")
+$config['theme'] = 'material_theme'; 			// Set the theme (defaults to "default")
 $config['date_format'] = '%A %e %b %G';		// Set the PHP date format
 /*
 $config['twig_config'] = array(			// Twig settings
