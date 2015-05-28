@@ -37,7 +37,7 @@ class mcb_TableOfContent {
 
       $cap = $this->caption =='' ? "" :  '<p id="toc-header">'.$this->caption.'</p>';
 
-      return '<div id="toc" class="'.$this->classs.'">'.$cap.'<ul class="section table-of-contents">'.$heads.'</ul></div>';
+      return '<div id="toc" class="'.$this->classs.' card"><div class="card-content">'.$cap.'<ul class="section table-of-contents">'.$heads.'</ul></div></div>';
    }
 
    public function config_loaded(&$settings)
