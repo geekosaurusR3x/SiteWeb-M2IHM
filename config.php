@@ -40,12 +40,8 @@ $config['at_navigation']['exclude']['regex'] = '';
 
 
 //social button
-$config['social']['class_prefix'] = 'btn btn-';
-
-
-//pico_slider
-$config['pico_slider']['image_path'] = 'content/images';
-$config['pico_slider']['image_ext'] = '.jpeg';
+$config['social']['class_prefix'] = 'btn-floating btn-';
+$config['social']['icon_class_prefix'] = 'fa fa-';
 
 //mcb_table_of_content
 $config['mcb_toc_top_txt'] = 'Vers le haut';

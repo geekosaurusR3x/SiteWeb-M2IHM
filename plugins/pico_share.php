@@ -27,7 +27,8 @@ class Pico_Share {
 						'linkedin' => true
 					),
 				'output' => 'list',
-				'class_prefix' => 'btn-'
+				'class_prefix' => 'btn-',
+			    'icon_class_prefix' => 'icon-'
 			);
 	}
 
@@ -41,6 +42,9 @@ class Pico_Share {
 		if(isset($settings['social']['class_prefix'])) {
 			$this->config['class_prefix'] = $settings['social']['class_prefix'];
 		};
+		if(isset($settings['social']['icon_class_prefix'])) {
+			$this->config['icon_class_prefix'] = $settings['social']['icon_class_prefix'];
+		};
 	}
 
 	public function before_render(&$twig_vars, &$twig, &$template) {
@@ -53,7 +57,7 @@ class Pico_Share {
 			if(is_bool($value) && $value) {
 				$activeServices[$key] = '<a class="'.$this->config['class_prefix'].$key.'" title="'.$key.' sharing" target="_blank" href="'.
 				preg_replace(array('/__TITLE__/', '/__URL__/', '/__EXCERPT__/'), array($pageTitle, $pageURL, $pageExcerpt), $this->templates[$key]).
-				'">'.$key.'</a>';
+				'"><i class="'.$this->config['icon_class_prefix'].$key.'"></i></a>';
 			};
 		};
 		switch($this->config['output']) {
